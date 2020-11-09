@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Player</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="_style/style_mp.css">
+</head>
+<body>
+
+<div id="mp-app">
+	<section class="container">
+		<div class="player">
+			<div class="toggle">
+				<div class="volume">
+					<img src="_asset/volume.png" width="20" height="20">
+					<div class="vshow">
+						<input type="range" name="" class="_volume">
+						<label class="_percent">0%</label>
+					</div>
+				</div>
+				<img src="_asset/note.png" width="12" height="17" onclick="goToPlaylist()">
+			</div>
+			<div class="circle">
+				<img src="_asset/hp.png" width="200">
+			</div>
+			<div class="title">
+				<div>
+					<h4 class="_title">Unknown</h4>
+					<p>Unknown</p>
+				</div>
+			</div>
+			<div class="elapsed">
+				<label class="_currTime">00:00</label>
+				<label class="_duration">00:00</label>
+			</div>
+			<div class="progress-bar">
+				<progress value="100" max="270" min="0" class="_progress">
+			</div>
+			<div class="screen">
+				<audio class="_audio">
+					<source src="_audio/10secondsong.mp3" type="audio/mp3" class="">
+				</audio>
+			</div>
+
+		</div>
+		<div class="playlist">
+			<ul class="songs">
+				<!-- songs here -->
+			</ul>
+		</div>
+		<div class="controller" onclick="popup()">
+			<button><img src="_asset/caret.png" width="20" height="20" class="_prev"></button>
+			<button><img src="_asset/play.png" width="30" height="30"  class="_play"></button>
+			<button><img src="_asset/caret1.png" width="20" height="20" class="_next"></button>
+		</div>
+	</section>
+</div>
+
+<script src="_script/songs.js"></script>
+<script src="_script/script_mp.js"></script>
+</body>
+</html>
